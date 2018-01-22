@@ -1,0 +1,15 @@
+.tparrows {
+	color: $regular_link_hover_color;
+	background-color: $invert_accent_color_1;
+}
+.tparrows:hover {
+	color: $invert_accent_color_1;
+	background-color: $regular_accent_color_1;
+}
+.tp-bullet {
+	background-color: @alpha($regular_accent_color_3, 20);
+}
+.tp-bullet.selected,
+.tp-bullet:hover {
+	background-color: $regular_accent_color_3;
+}

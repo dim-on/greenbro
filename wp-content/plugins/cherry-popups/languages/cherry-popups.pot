@@ -1,0 +1,892 @@
+# Copyright (C) 2018 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/\n"
+"POT-Creation-Date: 2018-01-18 12:28:22+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n1.0.1\n"
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:338
+msgid "Browse:"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:340
+msgid "404 Not Found"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:341
+msgid "Archives"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:342
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:343
+msgid "Page %s"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:344
+msgid "Minute %s"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:345
+msgid "Week %s"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:365
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:223
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:251
+msgid "Home"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-customizer/cherry-customizer.php:264
+msgid "Untitled Panel"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-customizer/cherry-customizer.php:300
+msgid "Untitled Section"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-customizer/cherry-customizer.php:334
+msgid "Untitled Control"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-db-updater/cherry-db-updater.php:103
+msgid "Module DB Updater init error in %s - version and slug is required arguments"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-db-updater/cherry-db-updater.php:104
+msgid "We need to update your database to the latest version."
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-db-updater/cherry-db-updater.php:105
+msgid "Update complete, thank you for updating to the latest version!"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-db-updater/cherry-db-updater.php:329
+msgid "Start Update"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-db-updater/cherry-db-updater.php:366
+msgid "Data Update"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-handler/cherry-handler.php:76
+msgid "Unable to process the request without nonce or server error"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-handler/cherry-handler.php:77
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:76
+msgid "No right for this action"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-handler/cherry-handler.php:78
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:77
+msgid "Stop CHEATING!!!"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-handler/cherry-handler.php:79
+msgid "Access is allowed"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-handler/cherry-handler.php:80
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:79
+msgid "Please wait, processing the previous request"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry-ui-elements/inc/class-cherry-lock-element.php:63
+msgid "Unlocked in PRO"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-button.php:64
+msgid "Cherry Shortcodes"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:125
+msgid "insert shortcode"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:145
+msgid "Shortcode List"
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:203
+msgid "Shortcode not found."
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:282
+msgid "Shortcode content."
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:283
+msgid "Input shortcode content."
+msgstr ""
+
+#: cherry-popups/cherry-framework/modules/cherry5-insert-shortcode/inc/class-cherry5-insertion-popup.php:298
+msgid "Shortcode not a have options."
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:75
+msgid "Unable to process the request without nonche or server error"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:115
+msgid "Popups Options"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:116
+msgid "Settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:184
+msgid "Options have been saved"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-admin.php:185
+msgid "Settings have been restored, page will be reloaded"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:49
+msgid "Popup settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:68
+msgid "General"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:69
+msgid "General popup settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:74
+msgid "Overlay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:75
+msgid "Overlay popup settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:80
+msgid "Style"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:81
+msgid "Styles popup settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:86
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:87
+msgid "\"Open\" page settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:92
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:93
+msgid "\"Close\" page settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:98
+msgid "Custom openning event"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:99
+msgid "Custom popup openning event"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:104
+msgid "Advanced settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:105
+msgid "Popup advanced settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:111
+msgid "Popup layout type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:112
+msgid "Choose popup layout type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:118
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:379
+msgid "Center"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:122
+msgid "Center & fullwidth"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:126
+msgid "Bottom & fullwidth"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:130
+msgid "Fullwidth"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:138
+msgid "Show/Hide animation"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:139
+msgid "Choose popup show/hide animation"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:145
+msgid "Fade"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:149
+msgid "Scale"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:153
+msgid "Move Up"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:161
+msgid "Base style preset"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:162
+msgid "Select base style preset"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:167
+msgid "Default"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:168
+msgid "Light"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:169
+msgid "Dark"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:170
+msgid "Blue"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:171
+msgid "Red"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:180
+msgid "Popup content type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:181
+msgid "Select popup type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:186
+msgid "Default(Content + Subscribe form)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:187
+msgid "Simple(Title + Content)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:188
+msgid "Content Only"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:189
+msgid "Login Form"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:190
+msgid "New User Register Form"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:191
+msgid "Subscribe Form"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:200
+msgid "Show once"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:201
+msgid "PopUp will appears just once and won’t come up when you close it."
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:215
+msgid "Type of overlay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:216
+msgid "Select type of overlay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:221
+msgid "Disabled"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:225
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:290
+msgid "Fill color"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:229
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:294
+msgid "Image"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:238
+msgid "Overlay background color"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:239
+msgid "Set the color of popup overlay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:246
+msgid "Overlay opacity"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:247
+msgid "Set the opacity(%) of popup overlay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:256
+msgid "Overlay background image"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:257
+msgid "Set image for popup overlay background"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:261
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:325
+msgid "Choose Image"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:269
+msgid "Use Overlay as close button"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:270
+msgid "Clicking on the overlay closes the popup"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:284
+msgid "Container background type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:285
+msgid "Select container background type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:302
+msgid "Container background color"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:303
+msgid "Set the color of popup container"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:310
+msgid "Container opacity"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:311
+msgid "Set the opacity(%) of popup container"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:320
+msgid "Container background image"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:321
+msgid "Set image for container background"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:333
+msgid "Popup width"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:334
+msgid "Input Popup width(px)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:342
+msgid "Popup height"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:343
+msgid "Input Popup height(px)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:351
+msgid "Popup padding"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:352
+msgid "Input Popup padding(px)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:361
+msgid "Popup border radius"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:362
+msgid "Define popup border radius(px)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:371
+msgid "Content Position"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:376
+msgid "Top"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:382
+msgid "Bottom"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:385
+msgid "Stretch"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:393
+msgid "\"Open page\" popup appear event"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:394
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:447
+msgid "Event to which will be popup open"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:399
+msgid "On page load"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:403
+msgid "Inactivity time after"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:407
+msgid "On page scrolling"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:415
+msgid "Open delay"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:416
+msgid "Set the time delay(s) when the page loads"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:425
+msgid "User inactivity time"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:426
+msgid "Set user inactivity time delay(s)"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:435
+msgid "Page scrolling value"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:436
+msgid "Open when user scroll % of page"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:446
+msgid "\"Close page\" popup appear event"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:452
+msgid "Outside viewport"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:455
+msgid "Page unfocus"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:463
+msgid "Custom event type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:464
+msgid "Define custom event type"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:469
+msgid "Click"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:472
+msgid "Hover"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:480
+msgid "Selector"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:481
+msgid "jQuery selector for custom event"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:488
+msgid "Custom class"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:489
+msgid "Popup custom class"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:498
+msgid "Cherry Popups"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:507
+msgid "Open Page Popup"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:508
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:205
+msgid "Assign one of the popup that is displayed when you open the page."
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:521
+msgid "Close Page Popup"
+msgstr ""
+
+#: cherry-popups/includes/admin/class-cherry-popups-meta-boxes.php:522
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:233
+msgid "Assign one of the popup that is displayed when you close the page"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:79
+msgid "Cherry PopUps Settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:80
+msgid "General cherry popUps settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:121
+msgid "General settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:122
+msgid "General plugin settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:126
+msgid "Open page settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:127
+msgid "Open page default popups settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:131
+msgid "Close page settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:132
+msgid "Close page default popups settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:136
+msgid "Mailing List Manager"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:137
+msgid "MailChimp settings"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:149
+msgid "Restore"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:157
+msgid "Save"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:162
+msgid "Enable popups"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:163
+msgid "Enable / Disable popups at once on all pages"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:176
+msgid "Enable Plugin on Mobile Devices"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:177
+msgid "Enable / Disable popups on mobile devices at once on all pages"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:190
+msgid "Enable for logged users"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:191
+msgid "All popup will not be displayed for logged users"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:204
+msgid "Default Open Page Popup"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:218
+msgid "Open page popup display in:"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:219
+msgid "Displaing Open page popup in site pages"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:224
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:252
+msgid "Pages"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:225
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:253
+msgid "Posts"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:226
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:254
+msgid "Categories, Archive and other"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:232
+msgid "Default Close Page Popup"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:246
+msgid "Close page popup display in:"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:247
+msgid "Displaing Close page popup in site pages"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:260
+msgid "MailChimp API key"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:261
+msgid "Input your MailChimp API key"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:261
+msgid "About API Keys"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:269
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:270
+msgid "MailChimp list ID"
+msgstr ""
+
+#: cherry-popups/includes/admin/pages/class-plugin-options-page.php:270
+msgid "list ID"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:74
+msgid "Please, provide valid mail"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:75
+msgid "Please, set up MailChimp API key and List ID"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:76
+msgid "Internal error. Please, try again later"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:77
+msgid "Server error. Please, try again later"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:78
+msgid "Success"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:79
+msgid "Login successful"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:80
+msgid "Login or password is wrong"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:81
+msgid "Login is empty"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:82
+msgid "Mail is empty"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:83
+msgid "Password is empty"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:84
+msgid "Registration complete. Please check your email. And Click to login link"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:85
+msgid "Registration error. Current user or user with this mail is already exists"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:86
+msgid ""
+"This username is invalid because it uses illegal characters. Please enter a "
+"valid username."
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:87
+msgid "The email address isn&#8217;t correct."
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:449
+#: cherry-popups/includes/public/class-popups-init.php:485
+msgid "Disable"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:571
+msgid "Logout"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:572
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:182
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:245
+msgid "Login"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-init.php:595
+msgid "Sign Up"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:70
+#: cherry-popups/includes/public/class-popups-registration.php:71
+msgid "PopUps"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:72
+msgid "Popups list"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:73
+msgid "Add Popup"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:74
+msgid "Add Popup Item"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:75
+msgid "Edit Popup Item"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:76
+msgid "New Popup Item"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:77
+msgid "View Popup Item"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:78
+msgid "Search Popup Items"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:79
+msgid "No Popup Items found"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-registration.php:80
+msgid "No Popup Items found in trash"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:155
+msgid "Subscribe"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:156
+msgid "Your email"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:181
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:248
+msgid "Log in"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:183
+msgid "Password"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:184
+msgid "Don't have an account? Click here to"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:185
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:244
+msgid "Sign up"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:186
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:249
+msgid "#"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:187
+msgid "Remember me"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:188
+msgid "or use your login data"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:189
+msgid "You are currently logged in"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:246
+msgid "Email"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:247
+msgid "Already have an account?"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:250
+msgid "or enter your registration credentials"
+msgstr ""
+
+#: cherry-popups/includes/public/class-popups-template-callbacks.php:293
+msgid "Close Popup"
+msgstr ""

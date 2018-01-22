@@ -1,0 +1,18 @@
+.elementor-counter-title {
+	margin-top: 3px;
+}
+.swiper-slide {
+	.content-wrapper {
+		text-align: center;
+
+		.post-thumbnail {
+			&,
+			.elementor & {
+				margin-bottom: 22px;
+			}
+		}
+		.entry-meta {
+			margin-bottom: 10px;
+		}
+	}
+}
