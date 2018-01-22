@@ -995,6 +995,7 @@ jardinier_theme();
 // Register Polylang translate strings
 pll_register_string( 'show again check', 'Don\'t show again', 'cherry-popups', false );
 
+//todo попытка изменить слаг services
 /*add_filter( 'cherry_services_post_type_args', '_my_rewrite_slug' );
 function _my_rewrite_slug( $args ) {
     $args['rewrite']['slug'] = 'services';
