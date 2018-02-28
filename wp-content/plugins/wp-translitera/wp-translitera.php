@@ -3,7 +3,7 @@
 Plugin Name: WP Translitera
 Plugin URI: http://yur4enko.com/category/moi-proekty/wp-translitera
 Description: Plug-in for transliteration permanent permalink records , pages, and tag
-Version: p1.1.1
+Version: p1.2.4
 Author: Evgen Yurchenko
 Text Domain: wp-translitera
 Domain Path: /languages/
@@ -35,61 +35,63 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     protected static function createlocale() {//wp=>3.2 php=>5.2.4
         $loc = get_locale();
         $ret = array();
+        
         if ($loc == 'ru_RU') {//Русская локализация 
             $ret = array(
-                'А'=>'A','а'=>'a','Б'=>'B','б'=>'b','В'=>'V','в'=>'v','Г'=>'G',
-                'г'=>'g','Д'=>'D','д'=>'d','Е'=>'E','е'=>'e','Ё'=>'Jo','ё'=>'jo',
-                'Ж'=>'Zh','ж'=>'zh','З'=>'Z','з'=>'z','И'=>'I','и'=>'i','Й'=>'J',
-                'й'=>'j','К'=>'K','к'=>'k','Л'=>'L','л'=>'l','М'=>'M','м'=>'m',
-                'Н'=>'N','н'=>'n','О'=>'O','о'=>'o','П'=>'P','п'=>'p','Р'=>'R',
-                'р'=>'r','С'=>'S','с'=>'s','Т'=>'T','т'=>'t','У'=>'U','у'=>'u',
-                'Ф'=>'F','ф'=>'f','Х'=>'H','х'=>'h','Ц'=>'C','ц'=>'c','Ч'=>'Ch',
-                'ч'=>'ch','Ш'=>'Sh','ш'=>'sh','Щ'=>'Shh','щ'=>'shh','Ъ'=>'',
-                'ъ'=>'','Ы'=>'Y','ы'=>'y','Ь'=>'','ь'=>'','Э'=>'Je','э'=>'je',
-                'Ю'=>'Ju','ю'=>'ju','Я'=>'Ja','я'=>'ja'
+                'А' => 'A', 'а' => 'a', 'Б' => 'B', 'б' => 'b', 'В' => 'V', 'в' => 'v', 'Г' => 'G',
+                'г' => 'g', 'Д' => 'D', 'д' => 'd', 'Е' => 'E', 'е' => 'e', 'Ё' => 'Jo', 'ё' => 'jo',
+                'Ж' => 'Zh', 'ж' => 'zh', 'З' => 'Z', 'з' => 'z', 'И' => 'I', 'и' => 'i', 'Й' => 'J',
+                'й' => 'j', 'К' => 'K', 'к' => 'k', 'Л' => 'L', 'л' => 'l', 'М' => 'M', 'м' => 'm',
+                'Н' => 'N', 'н' => 'n', 'О' => 'O', 'о' => 'o', 'П' => 'P', 'п' => 'p', 'Р' => 'R',
+                'р' => 'r', 'С' => 'S', 'с' => 's', 'Т' => 'T', 'т' => 't', 'У' => 'U', 'у' => 'u',
+                'Ф' => 'F', 'ф' => 'f', 'Х' => 'H', 'х' => 'h', 'Ц' => 'C', 'ц' => 'c', 'Ч' => 'Ch',
+                'ч' => 'ch', 'Ш' => 'Sh', 'ш' => 'sh', 'Щ' => 'Shh', 'щ' => 'shh', 'Ъ' => '',
+                'ъ' => '', 'Ы' => 'Y', 'ы' => 'y', 'Ь' => '', 'ь' => '', 'Э' => 'Je', 'э' => 'je',
+                'Ю' => 'Ju', 'ю' => 'ju', 'Я' => 'Ja', 'я' => 'ja'
             );
         } elseif ($loc == 'uk') {//Украинская локализация Добавлено 160415
             $ret = array(
-                'А'=>'A','а'=>'a','Б'=>'B','б'=>'b','В'=>'V','в'=>'v','Г'=>'H',
-                'г'=>'h','Ґ'=>'G','ґ'=>'g','Д'=>'D','д'=>'d','Е'=>'E','е'=>'e',
-                'Є'=>'Ie','є'=>'ie','Ж'=>'Zh','ж'=>'zh','З'=>'Z','з'=>'z','И'=>'Y',
-                'и'=>'y','І'=>'I','і'=>'i','Ї'=>'I','ї'=>'i','Й'=>'I','й'=>'i',
-                'К'=>'K','к'=>'k','Л'=>'L','л'=>'l','М'=>'M','м'=>'m','Н'=>'N',
-                'н'=>'n','О'=>'O','о'=>'o','П'=>'P','п'=>'p','Р'=>'R','р'=>'r',
-                'С'=>'S','с'=>'s','Т'=>'T','т'=>'t','У'=>'U','у'=>'u','Ф'=>'F',
-                'ф'=>'f','Х'=>'Kh','х'=>'kh','Ц'=>'Ts','ц'=>'ts','Ч'=>'Ch','ч'=>'ch',
-                'Ш'=>'Sh','ш'=>'sh','Щ'=>'Shch','щ'=>'shch','Ь'=>'','ь'=>'','Ю'=>'Iu',
-                'ю'=>'iu','Я'=>'Ia','я'=>'ia',"'"=>''
+                'А' => 'A', 'а' => 'a', 'Б' => 'B', 'б' => 'b', 'В' => 'V', 'в' => 'v', 'Г' => 'H',
+                'г' => 'h', 'Ґ' => 'G', 'ґ' => 'g', 'Д' => 'D', 'д' => 'd', 'Е' => 'E', 'е' => 'e',
+                'Є' => 'Ie', 'є' => 'ie', 'Ж' => 'Zh', 'ж' => 'zh', 'З' => 'Z', 'з' => 'z', 'И' => 'Y',
+                'и' => 'y', 'І' => 'I', 'і' => 'i', 'Ї' => 'I', 'ї' => 'i', 'Й' => 'I', 'й' => 'i',
+                'К' => 'K', 'к' => 'k', 'Л' => 'L', 'л' => 'l', 'М' => 'M', 'м' => 'm', 'Н' => 'N',
+                'н' => 'n', 'О' => 'O', 'о' => 'o', 'П' => 'P', 'п' => 'p', 'Р' => 'R', 'р' => 'r',
+                'С' => 'S', 'с' => 's', 'Т' => 'T', 'т' => 't', 'У' => 'U', 'у' => 'u', 'Ф' => 'F',
+                'ф' => 'f', 'Х' => 'Kh', 'х' => 'kh', 'Ц' => 'Ts', 'ц' => 'ts', 'Ч' => 'Ch', 'ч' => 'ch',
+                'Ш' => 'Sh', 'ш' => 'sh', 'Щ' => 'Shch', 'щ' => 'shch', 'Ь' => '', 'ь' => '', 'Ю' => 'Iu',
+                'ю' => 'iu', 'Я' => 'Ia', 'я' => 'ia'
             );
-        } elseif($loc == 'bg' || $loc == 'bg_BG') {//bulgarian locale добавлено 170114
+        } elseif ($loc == 'bg' || $loc == 'bg_BG') {//bulgarian locale добавлено 170114
             $ret = array(
-                'А'=>'A','а'=>'a','Б'=>'B','б'=>'b','В'=>'V','в'=>'v','Г'=>'G',
-                'г'=>'g','Д'=>'D','д'=>'d','Е'=>'E','е'=>'e','Ё'=>'Jo','ё'=>'jo',
-                'Ж'=>'Zh','ж'=>'zh','З'=>'Z','з'=>'z','И'=>'I','и'=>'i','Й'=>'J',
-                'й'=>'j','К'=>'K','к'=>'k','Л'=>'L','л'=>'l','М'=>'M','м'=>'m',
-                'Н'=>'N','н'=>'n','О'=>'O','о'=>'o','П'=>'P','п'=>'p','Р'=>'R',
-                'р'=>'r','С'=>'S','с'=>'s','Т'=>'T','т'=>'t','У'=>'U','у'=>'u',
-                'Ф'=>'F','ф'=>'f','Х'=>'H','х'=>'h','Ц'=>'C','ц'=>'c','Ч'=>'Ch',
-                'ч'=>'ch','Ш'=>'Sh','ш'=>'sh','Щ'=>'Sht','щ'=>'sht','Ъ'=>'a',
-                'ъ'=>'a','Ы'=>'Y','ы'=>'y','Ь'=>'','ь'=>'','Э'=>'Je','э'=>'je',
-                'Ю'=>'Ju','ю'=>'ju','Я'=>'Ja','я'=>'ja'
+                'А' => 'A', 'а' => 'a', 'Б' => 'B', 'б' => 'b', 'В' => 'V', 'в' => 'v', 'Г' => 'G',
+                'г' => 'g', 'Д' => 'D', 'д' => 'd', 'Е' => 'E', 'е' => 'e', 'Ё' => 'Jo', 'ё' => 'jo',
+                'Ж' => 'Zh', 'ж' => 'zh', 'З' => 'Z', 'з' => 'z', 'И' => 'I', 'и' => 'i', 'Й' => 'J',
+                'й' => 'j', 'К' => 'K', 'к' => 'k', 'Л' => 'L', 'л' => 'l', 'М' => 'M', 'м' => 'm',
+                'Н' => 'N', 'н' => 'n', 'О' => 'O', 'о' => 'o', 'П' => 'P', 'п' => 'p', 'Р' => 'R',
+                'р' => 'r', 'С' => 'S', 'с' => 's', 'Т' => 'T', 'т' => 't', 'У' => 'U', 'у' => 'u',
+                'Ф' => 'F', 'ф' => 'f', 'Х' => 'H', 'х' => 'h', 'Ц' => 'C', 'ц' => 'c', 'Ч' => 'Ch',
+                'ч' => 'ch', 'Ш' => 'Sh', 'ш' => 'sh', 'Щ' => 'Sht', 'щ' => 'sht', 'Ъ' => 'a',
+                'ъ' => 'a', 'Ы' => 'Y', 'ы' => 'y', 'Ь' => '', 'ь' => '', 'Э' => 'Je', 'э' => 'je',
+                'Ю' => 'Ju', 'ю' => 'ju', 'Я' => 'Ja', 'я' => 'ja'
             );
         }
         //Глобальная локализация 
         // добалено 160306, Обновлено 160415/
         $ret = $ret + array(
-            'А'=>'A','а'=>'a','Б'=>'B','б'=>'b','В'=>'V','в'=>'v','Г'=>'G',
-            'г'=>'g','Д'=>'D','д'=>'d','Е'=>'E','е'=>'e','Ё'=>'Jo','ё'=>'jo',
-            'Ж'=>'Zh','ж'=>'zh','З'=>'Z','з'=>'z','И'=>'I','и'=>'i','Й'=>'J',
-            'й'=>'j','К'=>'K','к'=>'k','Л'=>'L','л'=>'l','М'=>'M','м'=>'m',
-            'Н'=>'N','н'=>'n','О'=>'O','о'=>'o','П'=>'P','п'=>'p','Р'=>'R',
-            'р'=>'r','С'=>'S','с'=>'s','Т'=>'T','т'=>'t','У'=>'U','у'=>'u',
-            'Ф'=>'F','ф'=>'f','Х'=>'H','х'=>'h','Ц'=>'C','ц'=>'c','Ч'=>'Ch',
-            'ч'=>'ch','Ш'=>'Sh','ш'=>'sh','Щ'=>'Shh','щ'=>'shh','Ъ'=>'',
-            'ъ'=>'','Ы'=>'Y','ы'=>'y','Ь'=>'','ь'=>'','Э'=>'Je','э'=>'je',
-            'Ю'=>'Ju','ю'=>'ju','Я'=>'Ja','я'=>'ja','Ґ'=>'G','ґ'=>'g','Є'=>'Ie',
-            'є'=>'ie','І'=>'I','і'=>'i','Ї'=>'I','ї'=>'i',"'"=>''
+            'А' => 'A', 'а' => 'a', 'Б' => 'B', 'б' => 'b', 'В' => 'V', 'в' => 'v', 'Г' => 'G',
+            'г' => 'g', 'Д' => 'D', 'д' => 'd', 'Е' => 'E', 'е' => 'e', 'Ё' => 'Jo', 'ё' => 'jo',
+            'Ж' => 'Zh', 'ж' => 'zh', 'З' => 'Z', 'з' => 'z', 'И' => 'I', 'и' => 'i', 'Й' => 'J',
+            'й' => 'j', 'К' => 'K', 'к' => 'k', 'Л' => 'L', 'л' => 'l', 'М' => 'M', 'м' => 'm',
+            'Н' => 'N', 'н' => 'n', 'О' => 'O', 'о' => 'o', 'П' => 'P', 'п' => 'p', 'Р' => 'R',
+            'р' => 'r', 'С' => 'S', 'с' => 's', 'Т' => 'T', 'т' => 't', 'У' => 'U', 'у' => 'u',
+            'Ф' => 'F', 'ф' => 'f', 'Х' => 'H', 'х' => 'h', 'Ц' => 'C', 'ц' => 'c', 'Ч' => 'Ch',
+            'ч' => 'ch', 'Ш' => 'Sh', 'ш' => 'sh', 'Щ' => 'Shh', 'щ' => 'shh', 'Ъ' => '',
+            'ъ' => '', 'Ы' => 'Y', 'ы' => 'y', 'Ь' => '', 'ь' => '', 'Э' => 'Je', 'э' => 'je',
+            'Ю' => 'Ju', 'ю' => 'ju', 'Я' => 'Ja', 'я' => 'ja', 'Ґ' => 'G', 'ґ' => 'g', 'Є' => 'Ie',
+            'є' => 'ie', 'І' => 'I', 'і' => 'i', 'Ї' => 'I', 'ї' => 'i'
         );
+
         //Кстомные правила транслитерации
         // добавлено 170510
         $ret = wp_translitera::get_custom_rules_for_transliterate() + $ret;
@@ -104,7 +106,11 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         $tr_rules = array();
         foreach ($rules as $key => $value) {
             $tr_rules[$key] = $value;
-            $tr_rules[mb_strtoupper($key,'UTF-8')] = mb_strtoupper($value{0},'UTF-8').substr($value, 1);
+            if (strlen($value) > 0) {
+                $tr_rules[strtoupper($key)] = strtoupper($value{0}).substr($value, 1);
+            } else {
+                $tr_rules[strtoupper($key)] = $value;
+            }
         }
         return $tr_rules;
     }
@@ -118,6 +124,32 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         return (empty($value))?'':' checked';
     }
     
+    //Получаем элементы для темплейта
+    //  добавлено p1.2
+    //  принимает:  - name СТРОКА с именем переменной
+    //              - type СТРОКА тип элемента формы
+    //              - label СТРОКА заголовок элемента формы
+    //              - class СТРОКА с названием стиля оформления элемента
+    //              - params СТРОКА с параметрами оформления элемента
+    //              - value СТРОКА значение переменной
+    //  Возвращает СТРОКА элемент формы
+    protected static function get_template_object($name,$type,$label='',$class='',$params='',$value=''){//wp=>3.2 php=>5.2.4
+        $ret = "<div class='inputblock $class'>";
+        if ($type == 'checkbox') {
+            $ret .= "<input type='checkbox' name='$name' value='1' ".wp_translitera::getchebox($name)."><label>$label</label>";
+        }
+        if ($type == 'text') {
+            $ret .= "<label>$label</label></br><input type='text' $params name='$name' value='$value'>";
+        }
+        if ($type == 'textarea') {
+            $ret .= "<label>$label</label></br><textarea name='$name' $params>$value</textarea>";
+        }
+        if ($type == 'submit') {
+            $ret .= "<input type='submit' value='$label' name='$name'>";
+        }
+        echo $ret.'</div>';
+    }
+
     //Форма админки
     // добавлено 160119
     // возвращает HTML форму настроек плагина 
@@ -132,14 +164,11 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         }
         $customrulesinjson = wp_translitera::getset('custom_rules', json_encode(array()));
         $customrulesarray = json_decode($customrulesinjson, TRUE);
-        $customrulesstring = '';
+        $customrulesstring = '';        
         foreach ($customrulesarray as $key => $value) {
             $customrulesstring .=$key.'='.$value.PHP_EOL;
         }
-        
-        include_once __DIR__.'/admintmpl.php';
-
-        return $ret;                
+        include_once __DIR__.'/admintmpl.php';                
     }
     
     //Транслитерация в БД
@@ -162,7 +191,7 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     // добавлено 160128
     // возвращает МАССИВ настроек плагина
     protected static function getoptions() {//wp=>3.2 php=>5.2.4
-        if (is_multisite()) {
+        if (is_multisite() && wp_translitera::useglobalconfig()) {
             $set = get_site_option('wp_translitera');
         } else {
             $set = get_option('wp_translitera');
@@ -172,11 +201,24 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         }
         return $set;
     }
+    
+    //Получаем настройку использования глобальных настроек
+    //добавлено p1.2
+    //возвращает БУЛЕВО
+    protected static function useglobalconfig() {//wp=>3.2 php=>5.2.4
+        $set = get_option('wp_translitera');
+        if (gettype($set) != 'array') {
+            $set = array();
+        }
+        $name = 'use_global_mu_settings';
+        return (array_key_exists($name,$set))?$set[$name]:FALSE;
+    }
 
-    //Получаем значение настройки
+    ////Получаем значение настройки
     // добалено 160128
     // принимает:   - name СТРОКА с названием настройки плагина
     //              - def MIXED Значение которое возвращается в случае отсутсвия настройки введно p1.0.1
+    //              - local BOOLEAN получить значение локальных настроек или глобальных
     // возвращает: MIXED значение настройки плагина или NULL если не установлено
     protected static function getset($name,$def=NULL) {//wp=>3.2 php=>5.2.4
         $set = wp_translitera::getoptions();
@@ -187,7 +229,7 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     // добавлено 170212
     // принимает: МАССИВ с настройками плагина
     protected static function updateoption($set) {//wp=>3.2 php=>5.2.4
-        if (is_multisite()) {
+        if (is_multisite() && wp_translitera::useglobalconfig()) {
             update_site_option('wp_translitera',$set);
         } else {
             update_option('wp_translitera',$set);
@@ -226,7 +268,7 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         return FALSE;
     }
 
-    //Обнволение БД
+    //Выполняем обновление
     //добавлено 170212
     //Принимает:
     // from - текущая версия плагина
@@ -235,13 +277,14 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         if (empty($from)) {
             $from = 160819;
         }
-        if ($from == 160819) {
+        
+        if (version_compare($from, 160819,'<=')) {
             if (wp_translitera::getset('fileext') == NULL) {
                 wp_translitera::updset('fileext', array());
             }
             $from = 161011;
         }
-        if ($from == 161011) {
+        if (version_compare($from, 161011,'<=')) {
             if (is_multisite()) {
                 $set = wp_translitera::getoptions();
                 global $wpdb;
@@ -258,11 +301,20 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
             }
             $from = 170212;
         }
-        if ($from == 170212) {
+        if (version_compare($from, 170212,'<=')) {
             if (file_exists(__DIR__.'/unistall.php')) {
                 unlink(__DIR__.'/unistall.php');
             }
             $from = 170510;
+        }
+        if (version_compare($from, 'p1.2.1','<=')) {
+            if (file_exists(__DIR__.'/tables.php')) {
+                unlink(__DIR__.'/tables.php');
+            }
+            if (file_exists(__DIR__.'/worker.php')) {
+                unlink(__DIR__.'/worker.php');
+            }
+            $from = 'p1.2.2';
         }
         if ($for !=$from) {
             wp_translitera::updnotice();
@@ -275,7 +327,7 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     
     //Уведомление о необходимости проверить настройки
     //добавлено 170212
-    static function notice_admin_plugin_updated() {
+    static function notice_admin_plugin_updated() {//wp=>3.2 php=>5.2.4
         echo '<div class="updated" style="padding-top: 15px; padding-bottom:15px">'.__('Plugin WP Translitera has been updated,','wp-translitera').' <a href="options-general.php?page=wp-translitera%2Fwp-translitera">'.__('update settings','wp-translitera').'</a></div>';
     }
     
@@ -285,21 +337,68 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         global $wpdb;
         
         //инициализация языка
-        load_plugin_textdomain('wp-translitera', false, dirname(plugin_basename(__FILE__)).'/languages');
+        load_plugin_textdomain('wp-translitera', false, __DIR__.'/languages');
         
-        include_once 'worker.php';
-        echo wp_translitera::GetForm();
+        // обработка существующих объектов
+        $act = filter_input(INPUT_POST, 'transliterate');
+        if (!empty($act)) {
+            $r1 = filter_input(INPUT_POST, 'r1');
+            $r2 = filter_input(INPUT_POST, 'r2');
+            if (!empty($r1)) {
+                wp_translitera::do_transliterate($wpdb->posts, 'ID', 'post_name');
+            }
+            if (!empty($r2)) {
+                wp_translitera::do_transliterate($wpdb->terms, 'term_id', 'slug');
+            }
+            //wpforo добавлено p1.0.3
+            $f1 = filter_input(INPUT_POST, 'f1');
+            $f2 = filter_input(INPUT_POST, 'f2');
+            if (!empty($f1) || !empty($f2)) {
+                $blogprefix = $wpdb->get_blog_prefix();
+                if (!empty($f1)) {
+                    wp_translitera::do_transliterate($blogprefix . 'wpforo_forums', 'forumid', 'slug');
+                }
+                if (!empty($f2)) {
+                    wp_translitera::do_transliterate($blogprefix . 'wpforo_topics', 'topicid', 'slug');
+                }
+                wpforo_clean_cache();
+            }
+            //---
+        }
+
+        //Настройки
+        $setupd = filter_input(INPUT_POST, 'apply');
+        $sets = array();
+        if (!empty($setupd)) {
+            $sets['tranliterate_uploads_file'] = filter_input(INPUT_POST, 'tranliterate_uploads_file');
+            $sets['tranliterate_404'] = filter_input(INPUT_POST, 'tranliterate_404');
+            $sets['fileext'] = explode(',', filter_input(INPUT_POST, 'typefiles'));
+            $sets['use_force_transliterations'] = filter_input(INPUT_POST, 'use_force_transliterations');
+            $sets['init_in_front'] = filter_input(INPUT_POST, 'init_in_front');
+            $sets['lowercase_filename'] = filter_input(INPUT_POST, 'lowercase_filename'); //добавлено p1.1
+            $sets['use_global_mu_settings'] = filter_input(INPUT_POST, 'use_global_mu_settings'); //добавлено p1.2
+            $rulesstring = filter_input(INPUT_POST, 'customrules');
+            $rulesrawarray = explode(PHP_EOL, $rulesstring);
+            $rulesarray = array();
+            foreach ($rulesrawarray as $value) {
+                $value = trim($value);
+                if (empty($value) || $value == '=') {
+                    continue;
+                }
+                $tmp = explode('=', $value);
+                $rulesarray[$tmp[0]] = $tmp[1];
+            }
+            $sets['custom_rules'] = json_encode($rulesarray);
+            wp_translitera::updsets($sets);
+        }
+        wp_translitera::GetForm();
     }
     
     //Проверяем активен ли wpforo
     // добавлено p1.0.3
     // Возвращает БУЛЕВО
-    public static function wpforoactive() {
-        if (is_multisite()) {
-            $activeplugins = get_site_option('active_plugins');
-        } else {
-            $activeplugins = get_option('active_plugins');
-        }
+    public static function wpforoactive() {//wp=>3.2 php=>5.2.4
+        $activeplugins = get_option('active_plugins');
         if (gettype($activeplugins) != 'array') {
             $activeplugins = array();
         }
@@ -307,11 +406,12 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     }
 
     //Вызываемые функции
+    
     //Процедура преобразования символов
     // добавлено в 150712
     // принимает : title - СТРОКА которую необходимо транслитерировать
     // возвращает : СТРОКА
-    public static function transliterate($title) {//wp=>3.2 php=>5.2.4
+    public static function transliterate($title,$UseSpecSimbol=TRUE) {//wp=>3.2 php=>5.2.4
         //Отбрасывает файлы с расширениями для который отключена трнаслитерация 
         // добавлено 161011
         $type = substr(filter_input(INPUT_POST, 'name'),-3);
@@ -320,8 +420,16 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
                 return $title;
             }
         }
-        $title = mb_convert_encoding($title, 'UTF-8');
-        return strtr($title, wp_translitera::createlocale());
+        $title = strtr($title, wp_translitera::createlocale());
+        
+        if ($UseSpecSimbol) { // add p1.2.3 игнор спецсимволов для корректной работы 404
+            //add in p1.2.1 удаление непечатных и лишних символов
+            $title = preg_replace("/[^A-Za-z0-9'_\-\.]/", '-', $title);
+            $title = preg_replace('/\-+/', '-', $title);
+            $title = preg_replace('/^-+/', '', $title);
+            $title = preg_replace('/-+$/', '', $title);
+        }
+        return $title;
     }
     
     //Процедура преобразования символов форсированный режим
@@ -354,9 +462,8 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
         
         if ($this404){
             if (wp_translitera::getset('tranliterate_404')){
-                $thisurl = filter_input(INPUT_SERVER, 'REQUEST_URI');
-                $thisurl = urldecode($thisurl); 
-                $trurl = wp_translitera::transliterate($thisurl);
+                $thisurl = $_SERVER['REQUEST_URI']; 
+                $trurl = wp_translitera::transliterate(urldecode($thisurl),FALSE);
                 if ($thisurl != $trurl) {
                     wp_redirect($trurl,301);
                 }
@@ -430,7 +537,7 @@ class wp_translitera {//wp=>3.2 php=>5.2.4
     
     //Установка плагина
     // добавлено p1.0
-    static function install() {
+    static function install() {//wp=>3.2 php=>5.2.4
         $plugindata = get_plugin_data(__FILE__) ;
         wp_translitera::updset('version', $plugindata['Version']);
     }

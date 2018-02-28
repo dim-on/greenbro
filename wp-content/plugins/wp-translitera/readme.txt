@@ -4,7 +4,7 @@ Donate link: http://yur4enko.com/
 Tags: translate, rus-to-lat, cyr-to-lat, Seo, tag, record, page, transliterate, transliteration, bg, bulgarian
 Requires at least: 3.2
 Tested up to: 5.0
-Stable tag: p1.1.1
+Stable tag: p1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,57 @@ Automatical from repository or unzip in plugins and activate in ACP.
 == Screenshots ==
 
 == Changelog ==
+
+= p1.2.4 =
+* исправлена кнопка транслитерации существующих элементов
+* ---
+* Fixed transliteration of existing elements
+
+= p1.2.3 =
+* исправлена ошибка в работе кастомных правил транслитерации
+* поправлен шаблон
+* исправлена ошибка в режиме транслитерации 404 
+* ---
+* Fixed a bug in the work of custom transliteration rules
+* fixed template
+* Fixed bug in transliteration mode 404
+
+= p1.2.2 = 
+* исправлена ошибка при повторном вызове
+* оптимизирован вызов локализации
+* обновлен модуль обновления плагина
+* ---
+* Fixed bug with repeated call
+* Optimized localization call
+* updated plug-in update module
+
+= p1.2.1 =
+* исправлна мобильная версия и поравлен интерфейс
+* исправлена работа с некоторыми кодировками
+* исправлна работа с "лишними" и непечатными символами 
+(https://wordpress.org/support/topic/%D0%BD%D0%B5%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B7%D0%B0%D0%BF%D1%8F%D1%82%D0%BE%D0%B9/)
+* исправлены пути для подключения таблиц транслитерации
+* отказ от использования mbstring
+* ---
+* fixed mobile version and interface
+* fixed work with some encodings
+* fixed work with "excess" and unprinted characters
+(https://wordpress.org/support/topic/%D0%BD%D0%B5%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B7%D0%B0%D0%BF%D1%8F%D1%82%D0%BE%D0%B9/)
+* fixed the path to connect transliteration tables
+* renouncement to use mbstring
+
+= p1.2 =
+* таблицы транслитерации вынесены в отдельный файл
+* обновлен интерфейс
+* добавлена проверка активности модуля php mbstring
+* обновлена и исправлена работа в режиме мультисайт
+* исправлена совместимость "редиректа 404" с php-CGI
+* ---
+* transliteration tables moved in a separate file
+* updated interface
+* added check of the php mbstring module activity
+* updated and corrected work in multisite mode
+* compatibility of "redirect 404" with php-CGI is fixed
 
 = p1.1.1 = 
 * fix

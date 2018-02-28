@@ -236,10 +236,18 @@ class DB {
 			$autosave = $this->get_newer_autosave( $post_id );
 
 			if ( is_object( $autosave ) ) {
-				$data = $this->_get_json_meta( $autosave->ID, '_elementor_data' );
+				$autosave_data = $this->_get_json_meta( $autosave->ID, '_elementor_data' );
 			}
-		} elseif ( empty( $data ) && Plugin::$instance->editor->is_edit_mode() ) {
-			$data = $this->_get_new_editor_from_wp_editor( $post_id );
+		}
+
+		if ( Plugin::$instance->editor->is_edit_mode() ) {
+			if ( empty( $data ) && empty( $autosave_data ) ) {
+				$data = $this->_get_new_editor_from_wp_editor( $post_id );
+			}
+		}
+
+		if ( ! empty( $autosave_data ) ) {
+			$data = $autosave_data;
 		}
 
 		return $data;
@@ -459,18 +467,17 @@ class DB {
 	 * @access public
 	 */
 	public function safe_copy_elementor_meta( $from_post_id, $to_post_id ) {
-		if ( ! Plugin::$instance->db->is_built_with_elementor( $from_post_id ) ) {
-			return;
-		}
+		// It's from  WP-Admin & not from Elementor.
+		if ( ! did_action( 'elementor/db/before_save' ) ) {
 
-		// It's from Elementor, and not from WP-Admin
-		if ( did_action( 'elementor/db/before_save' ) ) {
-			return;
-		}
+			if ( ! Plugin::$instance->db->is_built_with_elementor( $from_post_id ) ) {
+				return;
+			}
 
-		// It's an exited Elementor auto-save
-		if ( get_post_meta( $to_post_id, '_elementor_data', true ) ) {
-			return;
+			// It's an exited Elementor auto-save
+			if ( get_post_meta( $to_post_id, '_elementor_data', true ) ) {
+				return;
+			}
 		}
 
 		$this->copy_elementor_meta( $from_post_id, $to_post_id );

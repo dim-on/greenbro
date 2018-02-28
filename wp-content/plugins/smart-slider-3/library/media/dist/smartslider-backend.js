@@ -3707,6 +3707,8 @@ N2Require('Generator', ['SlideAdmin'], ['smartSlider'], function ($, scope, smar
                 this.registerField($('#slidebackgroundAlt'));
                 this.registerField($('#slidebackgroundTitle'));
                 this.registerField($('#slidebackgroundVideoMp4'));
+				this.registerField($('#slidebackgroundColor'));
+				this.registerField($('#slidebackgroundColorEnd'));
                 this.registerField($('#linkslidelink_0'));
                 this.registerField($('#layergenerator-visible'));
                 this.registerField($('#layergroup-generator-visible'));
@@ -3968,7 +3970,7 @@ N2Require('Generator', ['SlideAdmin'], ['smartSlider'], function ($, scope, smar
 
 
             content.append(NextendModal.prototype.createHeading(n2_('Choose the variable')));
-            var variableContainer = $('<div class="n2-variable-container" />').appendTo(content);
+            var variableContainer = $('<div class="n2-variable-container webkit-scroll-fix" />').appendTo(content);
 
             //content.append(NextendModal.prototype.createHeading('Functions'));
             var functionsContainer = $('<div class="n2-generator-functions-container n2-form-element-mixed" />')
@@ -4696,11 +4698,24 @@ N2Require('SlideSettings', ['SlideEditManager'], ['smartSlider'], function ($, s
             };
 
     SlideSettings.prototype.updateBackgroundColor = function () {
-        var backgroundColor = this.fields.backgroundColor.val(),
+        var backgroundColor = smartSlider.generator.fill(this.fields.backgroundColor.val()),
             gradient = this.fields.backgroundGradient.val();
+        if(backgroundColor.length && backgroundColor.charAt(0) == '#'){
+			backgroundColor = backgroundColor.substring(1);
+			if(backgroundColor.length == 6){
+				backgroundColor += 'ff';
+			}
+        }
         if (gradient != 'off') {
-            var backgroundColorEnd = this.fields.backgroundColorEnd.val(),
+            var backgroundColorEnd = smartSlider.generator.fill(this.fields.backgroundColorEnd.val()),
                 $slideMask = this.$slideMask.css({background: '', filter: ''});
+
+			if(backgroundColorEnd.length && backgroundColorEnd.charAt(0) == '#'){
+				backgroundColorEnd = backgroundColorEnd.substring(1);
+				if(backgroundColorEnd.length == 6){
+					backgroundColorEnd += 'ff';
+				}
+			}
 
             switch (gradient) {
                 case 'horizontal':
@@ -7711,6 +7726,12 @@ N2Require('PlacementAbsolute', ['PlacementAbstract'], ['smartSlider'], function 
     };
 
     PlacementAbsolute.prototype.deActivated = function (newMode) {
+
+        var value = this.layer.getProperty('parentid');
+        if (value && value != '') {
+            this.$layer.removeAttr('data-parentid');
+            this.unSubscribeParent();
+        }
 
         this.$layer
             .removeAttr('data-align')

@@ -3,13 +3,8 @@ N2Loader::import('libraries.form.tab');
 
 class N2TabTabbedSidebar extends N2Tab {
 
-    var $_tabs;
-
     function initTabs() {
-        //строка ниже - привел к массиву, ибо была ошибка в админке
-        $a=(array)$this->_tabs;
-        //
-        if (count($a) == 0) {
+        if (count($this->_tabs) == 0) {
             foreach ($this->_xml->params as $tab) {
                 $test = N2XmlHelper::getAttribute($tab, 'test');
                 if ($test == '' || $this->_form->makeTest($test)) {

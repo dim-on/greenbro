@@ -5513,7 +5513,7 @@ N2Require('SmartSliderResponsive', [], [], function ($, scope, undefined) {
     };
 
     SmartSliderResponsive.prototype.onResize = function (e) {
-        if (!this.slider.mainAnimation || this.slider.mainAnimation.getState() == 'ended') {
+        if (!this.slider.mainAnimation || this.slider.mainAnimation.getState() != 'playing') {
             this.doResize(e);
         } else if (!this.delayedResizeAdded) {
             this.delayedResizeAdded = true;
@@ -5631,6 +5631,7 @@ N2Require('SmartSliderResponsive', [], [], function ($, scope, undefined) {
     };
 
     SmartSliderResponsive.prototype.doResize = function (e, fixedMode, timeline, nextSlide, duration) {
+
         if (!this.disableTransitions) {
             this.disableTransitions = true;
             this.sliderElement.addClass('n2notransition');
@@ -5672,12 +5673,13 @@ N2Require('SmartSliderResponsive', [], [], function ($, scope, undefined) {
 
                 var windowWidth = customWidth > 0 ? customWidth : (document.body.clientWidth || document.documentElement.clientWidth),
                     outerEl = this.containerElement.parent(),
-                    outerElBoundingRect = outerEl[0].getBoundingClientRect(),
+                    outerElLeft = outerEl.offset().left,
                     outerElOffset;
+
                 if (nextend.rtl.isRtl) {
-                    outerElOffset = windowWidth - (outerElBoundingRect.left + outerEl.outerWidth());
+                    outerElOffset = windowWidth - (outerElLeft + outerEl.outerWidth());
                 } else {
-                    outerElOffset = outerElBoundingRect.left;
+                    outerElOffset = outerElLeft;
                 }
                 this.containerElement.css(nextend.rtl.marginLeft, -outerElOffset - parseInt(outerEl.css('paddingLeft')) - parseInt(outerEl.css('borderLeftWidth')) + adjustLeftOffset)
                     .width(windowWidth);

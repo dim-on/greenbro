@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Translitera - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-01-18 07:34:45+0000\n"
+"PO-Revision-Date: 2018-01-22 10:02:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,17 +11,37 @@ msgstr ""
 "Language: ru\n"
 "Project-Id-Version: Plugins - WP Translitera - Stable (latest release)\n"
 
+#: admintmpl.php:29
+msgid "Transliteration tables"
+msgstr "Таблица транслитерации"
+
+#: admintmpl.php:26
+msgid "Convert files names to lower case"
+msgstr "Переводить имена файлов в нижний регистр"
+
+#: admintmpl.php:23
+msgid "Media settings"
+msgstr "Настройки медиа-файлов"
+
+#: admintmpl.php:17
+msgid "Use the settings of the main site"
+msgstr "Использовать настройки сайта"
+
+#: admintmpl.php:15
+msgid "Global settings"
+msgstr "Общие настройки"
+
 #. Author URI of the plugin/theme
 msgid "http://yur4enko.com/"
 msgstr "http://yur4enko.com/"
 
 #. Author of the plugin/theme
 msgid "Evgen Yurchenko"
-msgstr "Evgen Yurchenko"
+msgstr "Евгений Юрченко"
 
 #. Description of the plugin/theme
 msgid "Plug-in for transliteration permanent permalink records , pages, and tag"
-msgstr "Плагин для транслитерации записей постоянных ссылок, страниц и меток"
+msgstr "Плагин для транслитерации ссылок записей, страница и тегов"
 
 #. Plugin URI of the plugin/theme
 msgid "http://yur4enko.com/category/moi-proekty/wp-translitera"
@@ -31,19 +51,19 @@ msgstr "http://yur4enko.com/category/moi-proekty/wp-translitera"
 msgid "WP Translitera"
 msgstr "WP Translitera"
 
-#: wp-translitera.php:279
+#: wp-translitera.php:328
 msgid "update settings"
-msgstr "обновите настройки"
+msgstr "обновите настройки."
 
-#: wp-translitera.php:279
+#: wp-translitera.php:328
 msgid "Plugin WP Translitera has been updated,"
-msgstr "Плагин WP Translitera был обновлен,"
+msgstr "Плагин WP Trandslitera был обновлен,"
 
-#: admintmpl.php:29
+#: admintmpl.php:31
 msgid "Apply"
 msgstr "Применить"
 
-#: admintmpl.php:28
+#: admintmpl.php:30
 msgid "Custom transliteration rules, in format я=ja (Everyone ruled from a new line!)"
 msgstr "Пользовательские правила транслитерации, в формате я=ja (каждое правило с новой строки!)"
 
@@ -51,54 +71,46 @@ msgstr "Пользовательские правила транслитерац
 msgid "File extensions, separated by commas , titles that do not need to transliterate"
 msgstr "Расширения файлов, разделенные запятой, заголовки которых не нужно транслитерировать"
 
-#: admintmpl.php:26
+#: admintmpl.php:21
 msgid "Use transliteration in frontend for transliteration title out ACP (enable if use bbPress, buddypress, woocommerce etc)"
-msgstr "Использовать транслитерацию во фронтенде, для транслитерации заголовков вне панели управления ( включить если используете bbPress, buddypress, woocommerce итп)"
+msgstr "Использовать транслитерацию во фронтенде, для транслитерации заголовков вне панели управления ( включить если используете bbPress, buddypress, woocommerce etc)"
 
-#: admintmpl.php:25
+#: admintmpl.php:20
 msgid "Transliterate 404 url"
 msgstr "Транслитерация 404 ссылок"
 
-#: admintmpl.php:24
-msgid "Convert names to lower case"
-msgstr "Преобразовывать имена в нижний регистр"
-
-#: admintmpl.php:23
+#: admintmpl.php:25
 msgid "Transliterate names of uploads files"
 msgstr "Транслитерировать имена загружаемых файлов"
 
-#: admintmpl.php:22
+#: admintmpl.php:19
 msgid "Use forces transliteration for title"
-msgstr "Форсированный режим транслитерации для заголовков"
+msgstr "Форсированный режим транслитерации"
 
-#: admintmpl.php:20 wp-translitera.php:407
+#: admintmpl.php:13 wp-translitera.php:507
 msgid "Settings"
 msgstr "Настройки"
 
-#: admintmpl.php:18
+#: admintmpl.php:43
 msgid "Transliterate"
 msgstr "Транслитерировать"
 
-#: admintmpl.php:16
+#: admintmpl.php:37
 msgid "Headings, tags etc..."
-msgstr "Заголовки, метки итд..."
+msgstr "Рубрики, теги и тд"
 
-#: admintmpl.php:15
+#: admintmpl.php:36
 msgid "Pages and posts"
-msgstr "Страницы и записи"
+msgstr "Страницы и посты"
 
-#: admintmpl.php:13
+#: admintmpl.php:35
 msgid "Convert existing"
 msgstr "Преобразовать существующие"
 
-#: admintmpl.php:9
+#: admintmpl.php:41
 msgid "Topics"
 msgstr "Темы"
 
-#: admintmpl.php:8
+#: admintmpl.php:40
 msgid "Forums"
 msgstr "Форумы"
-
-#: admintmpl.php:7
-msgid "WPForo"
-msgstr "WPForo"

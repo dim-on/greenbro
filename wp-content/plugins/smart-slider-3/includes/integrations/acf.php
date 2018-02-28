@@ -37,7 +37,10 @@ class acf_field_smart_slider_3 extends acf_field {
             return false;
         }
 
-        return do_shortcode('[smartslider3 slider="' . $value . '"]');
+        if(!is_numeric($value)) {
+	        return do_shortcode('[smartslider3 alias="' . $value . '"]');
+        }
+        return do_shortcode('[smartslider3 slider=' . $value . ']');
     }
 
     public function format_value_for_api($value, $field) {
@@ -70,8 +73,14 @@ class acf_field_smart_slider_3 extends acf_field {
             if ($slider['type'] == 'group') {
 
                 $subChoices                = array();
+                if(!empty($slider['alias'])){
+	                $subChoices[$slider['alias']] = n2_('Whole group') . ' - ' . $slider['title'] . ' #Alias: ' . $slider['alias'];
+                }
                 $subChoices[$slider['id']] = n2_('Whole group') . ' - ' . $slider['title'] . ' #' . $slider['id'];
                 foreach ($slidersModel->getAll($slider['id']) AS $_slider) {
+	                if(!empty($_slider['alias'])){
+		                $subChoices[$_slider['alias']] = $_slider['title'] . ' #Alias: ' . $_slider['alias'];
+	                }
                     $subChoices[$_slider['id']] = $_slider['title'] . ' #' . $_slider['id'];
                 }
 
@@ -80,6 +89,9 @@ class acf_field_smart_slider_3 extends acf_field {
                     'choices' => $subChoices
                 );
             } else {
+	            if(!empty($slider['alias'])){
+		            $choices[$slider['alias']] = $slider['title'] . ' #Alias: ' . $slider['alias'];
+	            }
                 $choices[$slider['id']] = $slider['title'] . ' #' . $slider['id'];
             }
         }

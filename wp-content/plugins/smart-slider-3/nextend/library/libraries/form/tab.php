@@ -33,7 +33,7 @@ class N2Tab {
 
     var $_hide = false;
 
-    public $_tabs;
+    public $_tabs = array();
 
     /**
      * @param $form
@@ -137,10 +137,7 @@ class N2Tab {
     }
 
     function initTabs() {
-    	//строка ниже - привел к массиву, ибо была ошибка в админке
-    	$a=(array)$this->_tabs;
-    	//
-        if (count($a) == 0) {
+        if (count($this->_tabs) == 0) {
 
             foreach ($this->_xml->params as $tab) {
                 $test = N2XmlHelper::getAttribute($tab, 'test');

@@ -48,7 +48,7 @@ class N2SmartSliderFeatureFadeOnLoad {
         if (!$this->slider->isAdmin && $this->fadeOnLoad && ($this->slider->features->responsive->scaleDown || $this->slider->features->responsive->scaleUp)) {
 
             if (N2SystemHelper::testMemoryLimit()) {
-                if ($sizes['width'] + $sizes['marginHorizontal'] > 0 && $sizes['height'] > 0 && function_exists('imagecreatetruecolor')) {
+                if ($sizes['width'] + $sizes['marginHorizontal'] > 0 && $sizes['height'] > 0) {
                     return N2Html::tag("div", array(
                         "id"     => $this->slider->elementId . "-placeholder",
                         "encode" => false,
