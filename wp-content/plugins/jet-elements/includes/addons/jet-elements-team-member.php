@@ -195,9 +195,12 @@ class Jet_Elements_Team_Member extends Jet_Elements_Base {
 		$this->add_control(
 			'button_url',
 			array(
-				'label'   => esc_html__( 'Button URL', 'jet-elements' ),
-				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'jet-elements' ),
+				'label'       => esc_html__( 'Button Link', 'jet-elements' ),
+				'type'        => Controls_Manager::URL,
+				'placeholder' => 'http://your-link.com',
+				'default' => array(
+					'url' => '#',
+				),
 			)
 		);
 
@@ -1674,9 +1677,33 @@ class Jet_Elements_Team_Member extends Jet_Elements_Base {
 			return false;
 		}
 
-		$format = apply_filters( 'jet-elements/team-member/description-format', '<div class="jet-team-member__button-container"><a class="elementor-button elementor-size-md jet-team-member__button" href="%1$s">%2$s</a></div>' );
+		if ( is_array( $button_url ) && empty( $button_url['url'] ) ) {
+			return false;
+		}
 
-		return sprintf( $format, $button_url, $button_text );
+		$this->add_render_attribute( 'url', 'class', array(
+			'elementor-button',
+			'elementor-size-md',
+			'jet-team-member__button',
+		) );
+
+		if ( is_array( $button_url ) ) {
+			$this->add_render_attribute( 'url', 'href', $button_url['url'] );
+
+			if ( $button_url['is_external'] ) {
+				$this->add_render_attribute( 'url', 'target', '_blank' );
+			}
+
+			if ( ! empty( $button_url['nofollow'] ) ) {
+				$this->add_render_attribute( 'url', 'rel', 'nofollow' );
+			}
+		} else {
+			$this->add_render_attribute( 'url', 'href', $button_url );
+		}
+
+		$format = apply_filters( 'jet-elements/team-member/description-format', '<div class="jet-team-member__button-container"><a %1$s>%2$s</a></div>' );
+
+		return sprintf( $format, $this->get_render_attribute_string( 'url' ), $button_text );
 	}
 
 	public function __generate_social_icon_list( $cover_location = false ) {

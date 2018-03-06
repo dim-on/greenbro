@@ -145,26 +145,31 @@ class Jet_Elements_Button extends Jet_Elements_Base {
 			)
 		);
 
+		$effects = apply_filters(
+			'jet-elements/button/effects',
+			array(
+				'effect-0'  => esc_html__( 'None', 'jet-elements' ),
+				'effect-1'  => esc_html__( 'Fade', 'jet-elements' ),
+				'effect-2'  => esc_html__( 'Down Slide', 'jet-elements' ),
+				'effect-3'  => esc_html__( 'Up Slide', 'jet-elements' ),
+				'effect-4'  => esc_html__( 'Right Slide', 'jet-elements' ),
+				'effect-5'  => esc_html__( 'Left Slide', 'jet-elements' ),
+				'effect-6'  => esc_html__( 'Up Scale', 'jet-elements' ),
+				'effect-7'  => esc_html__( 'Down Scale', 'jet-elements' ),
+				'effect-8'  => esc_html__( 'Top Diagonal Slide', 'jet-elements' ),
+				'effect-9'  => esc_html__( 'Bottom Diagonal Slide', 'jet-elements' ),
+				'effect-10' => esc_html__( 'Right Rayen', 'jet-elements' ),
+				'effect-11' => esc_html__( 'Left Rayen', 'jet-elements' ),
+			)
+		);
+
 		$this->add_control(
 			'hover_effect',
 			array(
 				'label'   => esc_html__( 'Hover Effect', 'jet-elements' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'effect-0',
-				'options' => array(
-					'effect-0'  => esc_html__( 'None', 'jet-elements' ),
-					'effect-1'  => esc_html__( 'Fade', 'jet-elements' ),
-					'effect-2'  => esc_html__( 'Down Slide', 'jet-elements' ),
-					'effect-3'  => esc_html__( 'Up Slide', 'jet-elements' ),
-					'effect-4'  => esc_html__( 'Right Slide', 'jet-elements' ),
-					'effect-5'  => esc_html__( 'Left Slide', 'jet-elements' ),
-					'effect-6'  => esc_html__( 'Up Scale', 'jet-elements' ),
-					'effect-7'  => esc_html__( 'Down Scale', 'jet-elements' ),
-					'effect-8'  => esc_html__( 'Top Diagonal Slide', 'jet-elements' ),
-					'effect-9'  => esc_html__( 'Bottom Diagonal Slide', 'jet-elements' ),
-					'effect-10' => esc_html__( 'Right Rayen', 'jet-elements' ),
-					'effect-11' => esc_html__( 'Left Rayen', 'jet-elements' ),
-				),
+				'options' => $effects,
 			)
 		);
 

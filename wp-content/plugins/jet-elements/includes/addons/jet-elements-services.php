@@ -104,9 +104,12 @@ class Jet_Elements_Services extends Jet_Elements_Base {
 		$this->add_control(
 			'button_url',
 			array(
-				'label'   => esc_html__( 'Button URL', 'jet-elements' ),
-				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'jet-elements' ),
+				'label'       => esc_html__( 'Button Link', 'jet-elements' ),
+				'type'        => Controls_Manager::URL,
+				'placeholder' => 'http://your-link.com',
+				'default' => array(
+					'url' => '#',
+				),
 			)
 		);
 
@@ -1365,22 +1368,39 @@ class Jet_Elements_Services extends Jet_Elements_Base {
 			return false;
 		}
 
+		if ( is_array( $button_url ) && empty( $button_url['url'] ) ) {
+			return false;
+		}
+
 		if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
 			$icon_html = sprintf( '<i class="jet-services__button-icon %s"></i>', $button_icon );
 		}
 
-		$classes_list = array(
+		$this->add_render_attribute( 'url', 'class', array(
 			'elementor-button',
 			'elementor-size-md',
 			'jet-services__button',
 			'jet-services__button--icon-' . $icon_position,
-		);
+		) );
 
-		$classes = implode( ' ', $classes_list );
+		if ( is_array( $button_url ) ) {
+			$this->add_render_attribute( 'url', 'href', $button_url['url'] );
 
-		$format = apply_filters( 'jet-elements/services/description-format', '<a class="%1$s" href="%2$s"><span class="jet-services__button-text">%3$s</span>%4$s</a>' );
+			if ( $button_url['is_external'] ) {
+				$this->add_render_attribute( 'url', 'target', '_blank' );
+			}
 
-		return sprintf( $format, $classes, $button_url, $button_text, $icon_html );
+			if ( ! empty( $button_url['nofollow'] ) ) {
+				$this->add_render_attribute( 'url', 'rel', 'nofollow' );
+			}
+
+		} else {
+			$this->add_render_attribute( 'url', 'href', $button_url );
+		}
+
+		$format = apply_filters( 'jet-elements/services/action-button-format', '<a %1$s><span class="jet-services__button-text">%2$s</span>%3$s</a>' );
+
+		return sprintf( $format, $this->get_render_attribute_string( 'url' ), $button_text, $icon_html );
 	}
 
 }

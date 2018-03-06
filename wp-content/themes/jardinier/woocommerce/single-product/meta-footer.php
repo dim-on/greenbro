@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $product;
-
 $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-$tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
+//todo проверить нормальное решение по изменению sizeof для tag_count
+$tag_count = sizeof( array(get_the_terms( $post->ID, 'product_tag' ) ) );
 
 ?>
 <div class="product_meta product_meta__footer">

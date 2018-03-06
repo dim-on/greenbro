@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @since 1.0.0
  */
-class Jet_Elements_Control_Icon extends Elementor\Base_Data_Control {
+class Jet_Elements_Control_Icon extends Elementor\Control_Icon {
 
 	public function get_type() {
 		return 'icon';
@@ -23,7 +23,7 @@ class Jet_Elements_Control_Icon extends Elementor\Base_Data_Control {
 	 *
 	 * @return array
 	 */
-	public static function get_icons() {
+	public static function get_icons_set() {
 
 		$icon_data = jet_elements_tools()->get_theme_icons_data();
 
@@ -33,7 +33,7 @@ class Jet_Elements_Control_Icon extends Elementor\Base_Data_Control {
 		} elseif ( file_exists( $icon_data['file'] ) ) {
 			$icons = self::get_icons_from_path( $icon_data['file'] );
 		} else {
-			$icons = self::get_default_icons();
+			return self::get_icons();
 		}
 
 		$keys = $icons;
@@ -110,27 +110,8 @@ class Jet_Elements_Control_Icon extends Elementor\Base_Data_Control {
 
 	protected function get_default_settings() {
 		return [
-			'options' => self::get_icons(),
+			'options' => self::get_icons_set(),
 		];
-	}
-
-	public function content_template() {
-		?>
-		<div class="elementor-control-field">
-			<label class="elementor-control-title">{{{ data.label }}}</label>
-			<div class="elementor-control-input-wrapper">
-				<select class="elementor-control-icon" data-setting="{{ data.name }}" data-placeholder="<?php _e( 'Select Icon', 'elementor' ); ?>">
-					<option value=""><?php _e( 'Select Icon', 'elementor' ); ?></option>
-					<# _.each( data.options, function( option_title, option_value ) { #>
-					<option value="{{ option_value }}">{{{ option_title }}}</option>
-					<# } ); #>
-				</select>
-			</div>
-		</div>
-		<# if ( data.description ) { #>
-		<div class="elementor-control-field-description">{{ data.description }}</div>
-		<# } #>
-		<?php
 	}
 
 }

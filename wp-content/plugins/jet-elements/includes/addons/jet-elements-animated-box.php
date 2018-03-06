@@ -168,9 +168,12 @@ class Jet_Elements_Animated_Box extends Jet_Elements_Base {
 		$this->add_control(
 			'back_side_button_link',
 			array(
-				'label'   => esc_html__( 'Button link', 'jet-elements' ),
-				'type'    => Controls_Manager::TEXT,
-				'default' => '#',
+				'label'       => esc_html__( 'Button Link', 'jet-elements' ),
+				'type'        => Controls_Manager::URL,
+				'placeholder' => 'http://your-link.com',
+				'default' => array(
+					'url' => '#',
+				),
 			)
 		);
 

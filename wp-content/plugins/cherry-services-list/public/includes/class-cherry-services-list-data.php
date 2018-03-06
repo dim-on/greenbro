@@ -86,7 +86,8 @@ class Cherry_Services_List_Data {
 		return apply_filters( 'cherry_the_services_default_args', array(
 			'limit'          => 3,
 			'orderby'        => 'date',
-			'order'          => 'DESC',
+//			'order'          => 'DESC',
+			'order'          => 'ASC',
 			'category'       => '',
 			'id'             => 0,
 			'more'           => true,

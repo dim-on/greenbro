@@ -22,13 +22,15 @@ if ( ! jardinier_is_top_panel_visible() ) {
 			<div class="top-panel__wrap-items">
 				<div class="top-panel__menus">
 
-					<?php jardinier_top_menu(); ?>
+					<?php //jardinier_top_menu();?>
                     <?php
-                        if (is_user_logged_in()) {
-                            echo 'Hello, '. get_userdata( get_current_user_id() )->user_login;
+
+					if (is_user_logged_in()) {
+	                        echo jardinier_top_menu();
+
                         }
                             jardinier_sign_up_link();
-                            echo ' |';
+                            echo '|&nbsp;';
                             jardinier_login_link();
                     ?>
 

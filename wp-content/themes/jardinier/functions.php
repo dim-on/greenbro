@@ -851,6 +851,8 @@ if ( ! class_exists( 'Jardinier_Theme_Setup' ) ) {
 				JARDINIER_THEME_VERSION
 			);
 
+			wp_enqueue_style('custom-style', JARDINIER_THEME_CSS.'/custom.css', array(), '1.0.0');
+
 			/**
 			 * Filter the depends on main theme script.
 			 *
@@ -1002,3 +1004,27 @@ function _my_rewrite_slug( $args ) {
     return $args;
 }
 */
+//Change currency symbol
+add_filter( 'woocommerce_currencies', 'add_my_currency' );
+
+function add_my_currency( $currencies ) {
+
+	$currencies['UAH'] = __( 'Українська гривня', 'woocommerce' );
+
+	return $currencies;
+
+}
+
+add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
+
+function add_my_currency_symbol( $currency_symbol, $currency ) {
+
+	switch( $currency ) {
+
+		case 'UAH': $currency_symbol = '&nbsp;грн.'; break;
+
+	}
+
+	return $currency_symbol;
+
+}
